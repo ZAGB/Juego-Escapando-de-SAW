@@ -2,18 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package juegoescapandodesaw;
+package MenuInicio;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 /**
  *
  * @author zujeily
  */
 public class BienvenidoUsuarioNuevoOViejo extends javax.swing.JFrame {
-
+Fondo fondoSaw=new Fondo();
     /**
      * Creates new form BienvenidoUsuarioNuevoOViejo
      */
     public BienvenidoUsuarioNuevoOViejo() {
+        this.setContentPane(fondoSaw);
         initComponents();
     }
 
@@ -26,27 +32,58 @@ public class BienvenidoUsuarioNuevoOViejo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BienvenidoUsuarioPanelAbsoluto = new javax.swing.JPanel();
+        BienvenidoMen = new javax.swing.JLabel();
+        BienvenidoNomUs = new javax.swing.JLabel();
+        BotonContinuarJuego = new javax.swing.JButton();
+        JuegoNuevo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        BienvenidoUsuarioPanelAbsoluto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        BienvenidoMen.setForeground(new java.awt.Color(255, 255, 255));
+        BienvenidoMen.setText("Bienvenido");
+
+        BienvenidoNomUs.setText("jLabel1");
+
+        BotonContinuarJuego.setBackground(new java.awt.Color(0, 0, 0));
+        BotonContinuarJuego.setForeground(new java.awt.Color(255, 0, 0));
+        BotonContinuarJuego.setText("Continuar en ultimo nivel");
+
+        JuegoNuevo.setBackground(new java.awt.Color(0, 0, 0));
+        JuegoNuevo.setForeground(new java.awt.Color(255, 0, 0));
+        JuegoNuevo.setText("Iniciar Partida Nueva");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BienvenidoUsuarioPanelAbsoluto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(14, 14, 14)
+                .addComponent(BienvenidoMen, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BienvenidoNomUs, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(514, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(BotonContinuarJuego)
+                        .addGap(39, 39, 39))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(JuegoNuevo)
+                        .addGap(54, 54, 54))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BienvenidoUsuarioPanelAbsoluto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BienvenidoMen)
+                    .addComponent(BienvenidoNomUs))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 360, Short.MAX_VALUE)
+                .addComponent(BotonContinuarJuego)
+                .addGap(18, 18, 18)
+                .addComponent(JuegoNuevo)
+                .addGap(62, 62, 62))
         );
 
         pack();
@@ -88,6 +125,24 @@ public class BienvenidoUsuarioNuevoOViejo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel BienvenidoUsuarioPanelAbsoluto;
+    private javax.swing.JLabel BienvenidoMen;
+    private javax.swing.JLabel BienvenidoNomUs;
+    private javax.swing.JButton BotonContinuarJuego;
+    private javax.swing.JButton JuegoNuevo;
     // End of variables declaration//GEN-END:variables
+
+class Fondo extends JPanel{
+     private Image EscapandosawImage;         
+
+     @Override
+     public void paint (Graphics imagen){
+         
+     EscapandosawImage =new ImageIcon(getClass().getResource("/imagenes/sawRegistroUsuario.jpg")).getImage();
+     imagen.drawImage(EscapandosawImage, 0, 0, getWidth(), getHeight(), this);
+     setOpaque(false);
+     super.paint(imagen);
+
+
+     }}
+
 }

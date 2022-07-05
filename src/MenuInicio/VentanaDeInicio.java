@@ -2,18 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package juegoescapandodesaw;
+package MenuInicio;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 /**
  *
  * @author zujeily
  */
 public class VentanaDeInicio extends javax.swing.JFrame {
-
+Fondo fondoSaw=new Fondo();
     /**
      * Creates new form VentanaDeInicio
      */
     public VentanaDeInicio() {
+        this.setContentPane(fondoSaw);
         initComponents();
     }
 
@@ -26,31 +33,55 @@ public class VentanaDeInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CapaAbsoluta = new javax.swing.JPanel();
+        BotonVentanaInicio = new javax.swing.JButton();
+        EscapeVentanaInicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        CapaAbsoluta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        BotonVentanaInicio.setBackground(new java.awt.Color(0, 0, 0));
+        BotonVentanaInicio.setForeground(new java.awt.Color(204, 0, 0));
+        BotonVentanaInicio.setText("Comenzar");
+        BotonVentanaInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonVentanaInicioActionPerformed(evt);
+            }
+        });
+
+        EscapeVentanaInicio.setFont(new java.awt.Font("MathJax_Math", 1, 48)); // NOI18N
+        EscapeVentanaInicio.setForeground(new java.awt.Color(255, 0, 0));
+        EscapeVentanaInicio.setText("ESCAPEEE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(CapaAbsoluta, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(288, 288, 288)
+                        .addComponent(BotonVentanaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(EscapeVentanaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(304, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(CapaAbsoluta, javax.swing.GroupLayout.DEFAULT_SIZE, 519, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(EscapeVentanaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
+                .addComponent(BotonVentanaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(96, 96, 96))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BotonVentanaInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVentanaInicioActionPerformed
+        //Este Boton Comienza todo el juego y va al menu para registrarse
+        BotonVentanaInicio.setBackground(Color.RED);
+    }//GEN-LAST:event_BotonVentanaInicioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,6 +119,35 @@ public class VentanaDeInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel CapaAbsoluta;
+    private javax.swing.JButton BotonVentanaInicio;
+    private javax.swing.JLabel EscapeVentanaInicio;
     // End of variables declaration//GEN-END:variables
+
+     class Fondo extends JPanel{
+     private Image sawImage;         
+
+     @Override
+     public void paint (Graphics imagen){
+         
+     sawImage =new ImageIcon(getClass().getResource("/imagenes/sawgif.gif")).getImage();
+     imagen.drawImage(sawImage, 0, 0, getWidth(), getHeight(), this);
+     setOpaque(false);
+     super.paint(imagen);
+         
+     }
+         
+     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
