@@ -20,6 +20,7 @@ Fondo fondoSaw=new Fondo();
      */
     public BienvenidoUsuarioNuevoOViejo() {
         this.setContentPane(fondoSaw);
+        this.setLocationRelativeTo(null);
         initComponents();
     }
 
@@ -36,6 +37,7 @@ Fondo fondoSaw=new Fondo();
         BienvenidoNomUs = new javax.swing.JLabel();
         BotonContinuarJuego = new javax.swing.JButton();
         JuegoNuevo = new javax.swing.JButton();
+        RegresarVentanaInicio = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +54,18 @@ Fondo fondoSaw=new Fondo();
         JuegoNuevo.setForeground(new java.awt.Color(255, 0, 0));
         JuegoNuevo.setText("Iniciar Partida Nueva");
 
+        RegresarVentanaInicio.setForeground(new java.awt.Color(255, 255, 255));
+        RegresarVentanaInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon_132741.png"))); // NOI18N
+        RegresarVentanaInicio.setText("Regresar");
+        RegresarVentanaInicio.setContentAreaFilled(false);
+        RegresarVentanaInicio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        RegresarVentanaInicio.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        RegresarVentanaInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegresarVentanaInicioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -63,14 +77,17 @@ Fondo fondoSaw=new Fondo();
                 .addComponent(BienvenidoNomUs, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(514, Short.MAX_VALUE)
+                .addGap(35, 515, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(BotonContinuarJuego)
-                        .addGap(39, 39, 39))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(JuegoNuevo)
-                        .addGap(54, 54, 54))))
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(BotonContinuarJuego)
+                        .addGap(38, 38, 38))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(RegresarVentanaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,15 +96,21 @@ Fondo fondoSaw=new Fondo();
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BienvenidoMen)
                     .addComponent(BienvenidoNomUs))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 360, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 325, Short.MAX_VALUE)
                 .addComponent(BotonContinuarJuego)
                 .addGap(18, 18, 18)
                 .addComponent(JuegoNuevo)
-                .addGap(62, 62, 62))
+                .addGap(18, 18, 18)
+                .addComponent(RegresarVentanaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RegresarVentanaInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarVentanaInicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegresarVentanaInicioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,6 +152,7 @@ Fondo fondoSaw=new Fondo();
     private javax.swing.JLabel BienvenidoNomUs;
     private javax.swing.JButton BotonContinuarJuego;
     private javax.swing.JButton JuegoNuevo;
+    private javax.swing.JButton RegresarVentanaInicio;
     // End of variables declaration//GEN-END:variables
 
 class Fondo extends JPanel{

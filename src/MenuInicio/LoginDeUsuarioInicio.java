@@ -20,6 +20,7 @@ FondoLI LI= new FondoLI();
      */
     public LoginDeUsuarioInicio() {
         this.setContentPane(LI);
+        this.setLocationRelativeTo(null);
         initComponents();
     }
 
@@ -42,7 +43,8 @@ FondoLI LI= new FondoLI();
         EnterLU = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        EnterLU1 = new javax.swing.JButton();
+        UsuarioNuevoLU = new javax.swing.JButton();
+        RegresarLDUI = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -93,15 +95,28 @@ FondoLI LI= new FondoLI();
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
 
-        EnterLU1.setBackground(new java.awt.Color(0, 0, 0));
-        EnterLU1.setFont(new java.awt.Font("Gayathri Thin", 1, 18)); // NOI18N
-        EnterLU1.setForeground(new java.awt.Color(255, 0, 0));
-        EnterLU1.setText("Usuario Nuevo");
-        EnterLU1.setBorderPainted(false);
-        EnterLU1.setOpaque(false);
-        EnterLU1.addActionListener(new java.awt.event.ActionListener() {
+        UsuarioNuevoLU.setBackground(new java.awt.Color(0, 0, 0));
+        UsuarioNuevoLU.setFont(new java.awt.Font("Gayathri Thin", 1, 18)); // NOI18N
+        UsuarioNuevoLU.setForeground(new java.awt.Color(255, 0, 0));
+        UsuarioNuevoLU.setText("Usuario Nuevo");
+        UsuarioNuevoLU.setBorderPainted(false);
+        UsuarioNuevoLU.setOpaque(false);
+        UsuarioNuevoLU.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnterLU1ActionPerformed(evt);
+                UsuarioNuevoLUActionPerformed(evt);
+            }
+        });
+
+        RegresarLDUI.setFont(new java.awt.Font("Gayathri Thin", 1, 18)); // NOI18N
+        RegresarLDUI.setForeground(new java.awt.Color(255, 0, 0));
+        RegresarLDUI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon_132741.png"))); // NOI18N
+        RegresarLDUI.setText("Regresar");
+        RegresarLDUI.setContentAreaFilled(false);
+        RegresarLDUI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        RegresarLDUI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        RegresarLDUI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegresarLDUIActionPerformed(evt);
             }
         });
 
@@ -112,42 +127,43 @@ FondoLI LI= new FondoLI();
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
+                        .addGap(22, 22, 22)
+                        .addComponent(JSSmallLU)
+                        .addGap(18, 18, 18)
+                        .addComponent(IniSesLU, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PassLU, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PasswordFieldLU, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(UsuaLU, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(IngreUFieldLU, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(IngreUFieldLU, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(EnterLU, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(UsuarioNuevoLU, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addComponent(EnterLU, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(EnterLU1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 225, Short.MAX_VALUE)
+                        .addGap(108, 108, 108)
+                        .addComponent(RegresarLDUI, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
                 .addComponent(LogoGJS, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(JSSmallLU)
-                .addGap(18, 18, 18)
-                .addComponent(IniSesLU, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(JSSmallLU, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(IniSesLU, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LogoGJS, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(JSSmallLU, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(IniSesLU, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
                         .addComponent(UsuaLU, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(IngreUFieldLU, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -162,7 +178,13 @@ FondoLI LI= new FondoLI();
                         .addGap(40, 40, 40)
                         .addComponent(EnterLU, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(EnterLU1)))
+                        .addComponent(UsuarioNuevoLU)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(RegresarLDUI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(6, 6, 6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(187, Short.MAX_VALUE)
+                        .addComponent(LogoGJS, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(17, 17, 17))
         );
 
@@ -173,9 +195,20 @@ FondoLI LI= new FondoLI();
         // TODO add your handling code here:
     }//GEN-LAST:event_IngreUFieldLUActionPerformed
 
-    private void EnterLU1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterLU1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EnterLU1ActionPerformed
+    private void UsuarioNuevoLUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioNuevoLUActionPerformed
+        // Telleva a clase Crear Usuario Nuevo
+        CrearUsuarioNuevo CUN =new CrearUsuarioNuevo();
+        CUN.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_UsuarioNuevoLUActionPerformed
+
+    private void RegresarLDUIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarLDUIActionPerformed
+        // Este boton regresa a la Ventana de InicioFrame
+        VentanaDeInicio VDI =new VentanaDeInicio();
+        VDI.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_RegresarLDUIActionPerformed
 
     /**
      * @param args the command line arguments
@@ -214,14 +247,15 @@ FondoLI LI= new FondoLI();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton EnterLU;
-    private javax.swing.JButton EnterLU1;
     private javax.swing.JTextField IngreUFieldLU;
     private javax.swing.JLabel IniSesLU;
     private javax.swing.JLabel JSSmallLU;
     private javax.swing.JLabel LogoGJS;
     private javax.swing.JLabel PassLU;
     private javax.swing.JPasswordField PasswordFieldLU;
+    private javax.swing.JButton RegresarLDUI;
     private javax.swing.JLabel UsuaLU;
+    private javax.swing.JButton UsuarioNuevoLU;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables

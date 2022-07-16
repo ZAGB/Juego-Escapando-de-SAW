@@ -21,6 +21,7 @@ Fondo fondoSaw=new Fondo();
      */
     public VentanaDeInicio() {
         this.setContentPane(fondoSaw);
+        this.setLocationRelativeTo(null);
         initComponents();
     }
 
@@ -39,6 +40,7 @@ Fondo fondoSaw=new Fondo();
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         BotonVentanaInicio.setBackground(new java.awt.Color(0, 0, 0));
+        BotonVentanaInicio.setFont(new java.awt.Font("Gayathri Thin", 1, 18)); // NOI18N
         BotonVentanaInicio.setForeground(new java.awt.Color(204, 0, 0));
         BotonVentanaInicio.setText("Comenzar");
         BotonVentanaInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +83,9 @@ Fondo fondoSaw=new Fondo();
     private void BotonVentanaInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVentanaInicioActionPerformed
         //Este Boton Comienza todo el juego y va al menu para registrarse
         BotonVentanaInicio.setBackground(Color.RED);
+        LoginDeUsuarioInicio LUI = new LoginDeUsuarioInicio();
+        LUI.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_BotonVentanaInicioActionPerformed
 
     /**

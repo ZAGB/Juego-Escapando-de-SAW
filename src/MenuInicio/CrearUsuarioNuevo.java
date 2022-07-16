@@ -20,6 +20,7 @@ Fondo fondoSaw=new Fondo();
      */
     public CrearUsuarioNuevo() {
         this.setContentPane(fondoSaw);
+        this.setLocationRelativeTo(null);
         initComponents();
     }
 
@@ -46,9 +47,9 @@ Fondo fondoSaw=new Fondo();
         CorreoTextField2 = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         jPasswordField1 = new javax.swing.JPasswordField();
-        CancelarBoton = new javax.swing.JButton();
-        RegistrarButon = new javax.swing.JButton();
+        RegistrarButonCUN = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        ButonregresarCUN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,61 +107,67 @@ Fondo fondoSaw=new Fondo();
         jPasswordField1.setText("jPasswordField1");
         jPasswordField1.setBorder(null);
 
-        CancelarBoton.setBackground(new java.awt.Color(0, 0, 0));
-        CancelarBoton.setForeground(new java.awt.Color(255, 0, 0));
-        CancelarBoton.setText("Cancelar");
-
-        RegistrarButon.setBackground(new java.awt.Color(0, 0, 0));
-        RegistrarButon.setForeground(new java.awt.Color(255, 0, 0));
-        RegistrarButon.setText("Registrar");
-        RegistrarButon.addActionListener(new java.awt.event.ActionListener() {
+        RegistrarButonCUN.setBackground(new java.awt.Color(0, 0, 0));
+        RegistrarButonCUN.setFont(new java.awt.Font("FreeSans", 1, 14)); // NOI18N
+        RegistrarButonCUN.setForeground(new java.awt.Color(255, 0, 0));
+        RegistrarButonCUN.setText("Registrar");
+        RegistrarButonCUN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarButonActionPerformed(evt);
+                RegistrarButonCUNActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/home/zujeily/Downloads/SawGame.png")); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SawGame.png"))); // NOI18N
+
+        ButonregresarCUN.setFont(new java.awt.Font("FreeSans", 1, 14)); // NOI18N
+        ButonregresarCUN.setForeground(new java.awt.Color(255, 0, 0));
+        ButonregresarCUN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon_132741.png"))); // NOI18N
+        ButonregresarCUN.setText("Regresar");
+        ButonregresarCUN.setContentAreaFilled(false);
+        ButonregresarCUN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ButonregresarCUN.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ButonregresarCUN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButonregresarCUNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(NameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CorreoTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CedulaTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(ContraseñaRegistro4, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(CedulaRegistro2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(NombreRegistro1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(IconoSawRegistro)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(TituloSawRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(CorreoRegistro3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(CancelarBoton)))
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CorreoTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CedulaTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(ContraseñaRegistro4, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(CedulaRegistro2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(NombreRegistro1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(IconoSawRegistro)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(TituloSawRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(CorreoRegistro3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(RegistrarButonCUN)
+                                    .addGap(133, 133, 133))
+                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(12, 12, 12)
+                                    .addComponent(ButonregresarCUN, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(14, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(40, 40, 40)
-                    .addComponent(RegistrarButon)
-                    .addContainerGap(624, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,11 +185,11 @@ Fondo fondoSaw=new Fondo();
                 .addComponent(NameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(CorreoRegistro3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(CorreoRegistro3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(CedulaTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -198,26 +205,29 @@ Fondo fondoSaw=new Fondo();
                         .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)))
-                .addComponent(CancelarBoton)
-                .addGap(23, 23, 23))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(568, Short.MAX_VALUE)
-                    .addComponent(RegistrarButon)
-                    .addGap(73, 73, 73)))
+                        .addGap(33, 33, 33)
+                        .addComponent(RegistrarButonCUN)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ButonregresarCUN, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(66, 66, 66))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RegistrarButonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarButonActionPerformed
+    private void RegistrarButonCUNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarButonCUNActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RegistrarButonActionPerformed
+    }//GEN-LAST:event_RegistrarButonCUNActionPerformed
+
+    private void ButonregresarCUNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButonregresarCUNActionPerformed
+        // Buton de Regresar a LoginDeUsuarioInicio
+        LoginDeUsuarioInicio LUN = new LoginDeUsuarioInicio();
+        LUN.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ButonregresarCUNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,7 +265,7 @@ Fondo fondoSaw=new Fondo();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CancelarBoton;
+    private javax.swing.JButton ButonregresarCUN;
     private javax.swing.JLabel CedulaRegistro2;
     private javax.swing.JTextField CedulaTextField1;
     private javax.swing.JLabel ContraseñaRegistro4;
@@ -264,7 +274,7 @@ Fondo fondoSaw=new Fondo();
     private javax.swing.JLabel IconoSawRegistro;
     private javax.swing.JTextField NameTextField;
     private javax.swing.JLabel NombreRegistro1;
-    private javax.swing.JButton RegistrarButon;
+    private javax.swing.JButton RegistrarButonCUN;
     private javax.swing.JLabel TituloSawRegistro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPasswordField jPasswordField1;
