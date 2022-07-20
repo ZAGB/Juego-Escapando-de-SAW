@@ -18,6 +18,7 @@ public class Parte4 extends javax.swing.JFrame {
      */
     public Parte4() {
         initComponents();
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**
@@ -29,14 +30,30 @@ public class Parte4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Run2 = new javax.swing.JLabel();
+        Run1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setPreferredSize(new java.awt.Dimension(760, 548));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 460, 310));
+        Run2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/runB2.gif"))); // NOI18N
+        getContentPane().add(Run2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 500, 210));
+
+        Run1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/runB.gif"))); // NOI18N
+        getContentPane().add(Run1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 480, 210));
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
+        jButton1.setText("Siguiente");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 490, -1, -1));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Oliver corrio asustado por como lo seguia sin disimulo alguno este hombre ");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,6 +96,9 @@ public class Parte4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Run1;
+    private javax.swing.JLabel Run2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 

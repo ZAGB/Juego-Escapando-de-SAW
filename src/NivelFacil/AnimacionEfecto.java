@@ -8,6 +8,10 @@ package NivelFacil;
  *
  * @author zujeily
  */
-public class AnimacionEfecto {
+public class AnimacionEfecto extends Parte2{
+    
+    
+    
+    
     
 }
