@@ -4,16 +4,24 @@
  */
 package NivelFacil;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
 /**
  *
  * @author zujeily
  */
 public class Parte2 extends javax.swing.JFrame {
+Fondo Alone =new Fondo();
 
     /**
      * Creates new form Parte2
      */
     public Parte2() {
+        this.setContentPane(Alone);
+        this.setLocationRelativeTo(null);
         initComponents();
     }
 
@@ -79,4 +87,26 @@ public class Parte2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+class Fondo extends JPanel{
+     private Image Alone;         
+
+     @Override
+     public void paint (Graphics imagen){
+         
+     Alone =new ImageIcon(getClass().getResource("/imagenes/calleSola1.jpg")).getImage();
+     imagen.drawImage(Alone, 0, 0, getWidth(), getHeight(), this);
+     setOpaque(false);
+     super.paint(imagen);
+     
+      
+        
+        
+     }
+         
+     }
+
+
+
+
+
 }

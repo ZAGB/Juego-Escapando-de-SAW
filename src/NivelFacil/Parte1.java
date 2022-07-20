@@ -10,6 +10,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import java.awt.EventQueue;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 /**
  *
@@ -17,6 +18,7 @@ import javax.swing.JFrame;
  */
 public class Parte1 extends javax.swing.JFrame {
 Fondo Gymatnigt =new Fondo();
+   private int count=0;
     /**
      * Creates new form Parte1
      */
@@ -36,13 +38,17 @@ Fondo Gymatnigt =new Fondo();
     private void initComponents() {
 
         SiguienteBtn = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jText1 = new javax.swing.JLabel();
+        JText2 = new javax.swing.JLabel();
+        jText3 = new javax.swing.JLabel();
+        jText4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 102));
-        setPreferredSize(new java.awt.Dimension(480, 626));
+        setPreferredSize(new java.awt.Dimension(600, 626));
 
+        SiguienteBtn.setBackground(new java.awt.Color(0, 0, 0));
+        SiguienteBtn.setForeground(new java.awt.Color(255, 0, 0));
         SiguienteBtn.setText("Siguiente");
         SiguienteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,46 +56,98 @@ Fondo Gymatnigt =new Fondo();
             }
         });
 
-        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(255, 0, 0));
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("nkedjvjkdbvkjd");
-        jScrollPane1.setViewportView(jTextArea1);
+        jText1.setVisible(false);
+        jText1.setBackground(new java.awt.Color(255, 0, 0));
+        jText1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jText1.setForeground(new java.awt.Color(255, 0, 0));
+        jText1.setText("Oliver un estudiante de Univerisdad que venia saliendo de la Gym");
+
+        JText2.setVisible(false);
+        JText2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        JText2.setForeground(new java.awt.Color(255, 0, 0));
+        JText2.setText("Iba de camino a su casa, caminaba apresurado porque eran las 11 p.m y");
+
+        jText3.setVisible(false);
+        jText3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jText3.setForeground(new java.awt.Color(255, 0, 0));
+        jText3.setText("perdió la noción del tiempo mientras entrenaba, tanto asi que lo noto");
+
+        jText4.setVisible(false);
+        jText4.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jText4.setForeground(new java.awt.Color(255, 0, 0));
+        jText4.setText("por que el empleado del lugar apago las luces para darselo a saber ");
+        jText4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jText4MouseReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(SiguienteBtn)
+                .addGap(103, 103, 103))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jText4)
+                    .addComponent(jText3, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jText1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(SiguienteBtn)))
-                .addGap(40, 40, 40))
+                .addComponent(JText2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 411, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jText1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addComponent(JText2)
+                .addGap(89, 89, 89)
+                .addComponent(jText3)
+                .addGap(89, 89, 89)
+                .addComponent(jText4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addComponent(SiguienteBtn)
-                .addGap(23, 23, 23))
+                .addGap(39, 39, 39))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void SiguienteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SiguienteBtnActionPerformed
-        // Este click va a servir para mover diferentes textos 
-       
-        
-        
+        // Mostrar los Labels con texto
+        boolean click=true;
+         count +=1;
+        if(count ==1){
+           jText1.setVisible(true);
+        }else if(count ==2){
+           JText2.setVisible(true);
+        }else if(count ==3){
+            jText3.setVisible(true);
+        }else if(count ==4){
+            jText4.setVisible(true);
+        }else if(count ==5){
+            jText1.setVisible(false);
+            JText2.setVisible(false);
+            jText3.setVisible(false);
+            jText4.setVisible(false);    
+        }else{
+            Parte2 siguiente =new Parte2();
+            siguiente.setVisible(true);
+            this.setVisible(false);
+        }   
     }//GEN-LAST:event_SiguienteBtnActionPerformed
+
+    private void jText4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jText4MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jText4MouseReleased
 
     /**
      * @param args the command line arguments
@@ -127,9 +185,11 @@ Fondo Gymatnigt =new Fondo();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JText2;
     private javax.swing.JButton SiguienteBtn;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel jText1;
+    private javax.swing.JLabel jText3;
+    private javax.swing.JLabel jText4;
     // End of variables declaration//GEN-END:variables
 
 
@@ -143,7 +203,10 @@ class Fondo extends JPanel{
      imagen.drawImage(Gymatnigt, 0, 0, getWidth(), getHeight(), this);
      setOpaque(false);
      super.paint(imagen);
-         
+     
+      
+        
+        
      }
          
      }

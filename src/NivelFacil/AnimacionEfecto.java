@@ -8,6 +8,6 @@ package NivelFacil;
  *
  * @author zujeily
  */
-public class main {
+public class AnimacionEfecto {
     
 }
