@@ -121,7 +121,7 @@ Fondo fondoSaw=new Fondo();
 
         ButonregresarCUN.setFont(new java.awt.Font("FreeSans", 1, 14)); // NOI18N
         ButonregresarCUN.setForeground(new java.awt.Color(255, 0, 0));
-        ButonregresarCUN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon_132741.png"))); // NOI18N
+        ButonregresarCUN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon.png"))); // NOI18N
         ButonregresarCUN.setText("Regresar");
         ButonregresarCUN.setContentAreaFilled(false);
         ButonregresarCUN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

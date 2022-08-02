@@ -33,17 +33,40 @@ Fondo Stranger =new Fondo();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Text1 = new javax.swing.JLabel();
+        Text2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Text1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        Text1.setForeground(new java.awt.Color(255, 0, 0));
+        Text1.setText("Cuando volvio a ver sintio como todo su cuerpo lo recorrio un frio sin control");
+
+        Text2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        Text2.setForeground(new java.awt.Color(255, 0, 0));
+        Text2.setText("Y sintio miedo por que sabia que su padre le debia mucha plata a varias personas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Text1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(55, Short.MAX_VALUE)
+                .addComponent(Text2)
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 531, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(Text1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
+                .addComponent(Text2)
+                .addGap(107, 107, 107))
         );
 
         pack();
@@ -85,6 +108,8 @@ Fondo Stranger =new Fondo();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Text1;
+    private javax.swing.JLabel Text2;
     // End of variables declaration//GEN-END:variables
 
 class Fondo extends JPanel{

@@ -109,7 +109,7 @@ FondoLI LI= new FondoLI();
 
         RegresarLDUI.setFont(new java.awt.Font("Gayathri Thin", 1, 18)); // NOI18N
         RegresarLDUI.setForeground(new java.awt.Color(255, 0, 0));
-        RegresarLDUI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon_132741.png"))); // NOI18N
+        RegresarLDUI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon.png"))); // NOI18N
         RegresarLDUI.setText("Regresar");
         RegresarLDUI.setContentAreaFilled(false);
         RegresarLDUI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

@@ -34,21 +34,76 @@ Fondo Alone =new Fondo();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Text1 = new javax.swing.JLabel();
+        Text2 = new javax.swing.JLabel();
+        Text3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Text1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        Text1.setForeground(new java.awt.Color(255, 0, 0));
+        Text1.setText("Algunas veces el barrio solia ser muy solitario");
+
+        Text2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        Text2.setForeground(new java.awt.Color(255, 0, 0));
+        Text2.setText("Ese dia en especifico todo se encontraba cerrado y el ruido era minimo, parecia un pueblo fantasma");
+
+        Text3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        Text3.setForeground(new java.awt.Color(255, 0, 0));
+        Text3.setText("El chico un poco asustado creyo escuchar ruidos");
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(Text1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Text2)
+                        .addGap(14, 14, 14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Text3)
+                        .addGap(107, 107, 107))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(68, 68, 68))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 531, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(Text1)
+                .addGap(112, 112, 112)
+                .addComponent(Text2)
+                .addGap(89, 89, 89)
+                .addComponent(Text3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(56, 56, 56))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        AnimacionEfecto AE =new AnimacionEfecto();
+       Text1.setVisible(AE.InvisibleMode());
+               //;
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,8 +141,13 @@ Fondo Alone =new Fondo();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    protected javax.swing.JLabel Text1;
+    protected javax.swing.JLabel Text2;
+    protected javax.swing.JLabel Text3;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
-class Fondo extends JPanel{
+
+    class Fondo extends JPanel{
      private Image Alone;         
 
      @Override

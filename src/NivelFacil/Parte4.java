@@ -51,8 +51,9 @@ public class Parte4 extends javax.swing.JFrame {
         jButton1.setText("Siguiente");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 490, -1, -1));
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Oliver corrio asustado por como lo seguia sin disimulo alguno este hombre ");
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Oliver corrio asustado poco despues de darse cuenta que el tipo lo seguia");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
 
         pack();

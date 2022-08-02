@@ -55,7 +55,7 @@ Fondo fondoSaw=new Fondo();
         JuegoNuevo.setText("Iniciar Partida Nueva");
 
         RegresarVentanaInicio.setForeground(new java.awt.Color(255, 255, 255));
-        RegresarVentanaInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon_132741.png"))); // NOI18N
+        RegresarVentanaInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prev_previous_icon.png"))); // NOI18N
         RegresarVentanaInicio.setText("Regresar");
         RegresarVentanaInicio.setContentAreaFilled(false);
         RegresarVentanaInicio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
